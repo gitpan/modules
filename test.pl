@@ -9,7 +9,7 @@ use Test;
 
 BEGIN { plan tests => 2 };
 
-use modules (qw(strict warnings 5.006 Data::Dumper) );
+use modules (qw(strict warnings 5.006 -force +force -force Data::Dumper) );
 
 ok(1); # If we made it this far, we're ok.
 

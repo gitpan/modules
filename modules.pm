@@ -1,8 +1,8 @@
 package modules;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
-our $DEBUG = 1;
+our $DEBUG = 0;
 
 use Carp;
 
@@ -18,7 +18,7 @@ sub import
 
 		for ( @_ )
 		{
-			if( /^(.)force$/ )
+			if( /^([\-\+])force$/ )
 			{
 				$force = ($1 eq '-') ? 0 : 1;
 
