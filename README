@@ -22,17 +22,9 @@ Ironically 'modules' is a module. The name was choosen (against the recommendati
 to use lower case names for pragma's only), because the 'use modules' construct
 sounds so self-explanatory.
 
-I just recommend to use it, if you know for what its good for. If you are a perl-
-beginner, it may more confuse you instead of helping to shrink your code for some
-characters again.
-
-VERSION
-
-0.01
-
 INSTALLATION
 
-To install this module type the following (on Win32 use 'nmake'):
+To install this module type the following (on Win32 use ie. 'nmake'):
 
 	perl Makefile.PL
 	make
@@ -41,18 +33,21 @@ To install this module type the following (on Win32 use 'nmake'):
 
 DEPENDENCIES
 
-Doesn't requires other modules and libraries.
+The 'CPAN' module if the 'force' feature is turned on.
+
+FEATURES
+
+	- automatically loads modules from CPAN (via the CPAN module) if they fail
+	loading. So just 'use modules qw(Exotic::Module)' in your script and do not care if
+	its on the local system or not, because if not 'modules' catches and installs
+	it from CPAN.
 
 AUTHOR
 
-Murat Ünalan (murat.uenalan@charite.de)
+Murat Ünalan (muenalan@cpan.org)
 
 COPYRIGHT NOTICE
 
 Copyright (c) 2002 Murat Ünalan. All rights reserved.
-
 This program is free software; you can redistribute it and/or modify it
-
 under the same terms as Perl itself.
-
-

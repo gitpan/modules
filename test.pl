@@ -9,13 +9,15 @@ use Test;
 
 BEGIN { plan tests => 2 };
 
-use modules;
+use modules (qw(strict warnings 5.006 Data::Dumper) );
 
 ok(1); # If we made it this far, we're ok.
 
-use modules qw(strict warnings 5.006 Data::Dumper);
-
 	print Dumper { one => 1, two => 2 };
+
+#use modules (qw(strict warnings 5.006 Data::Dumper -force FAKE::PACKAGE::1 FAKE::PACKAGE::2), { IO::Extended => 'qw(:all)' } );
+
+#	println "IO::Extended ..loaded";
 
 ok(1);
 

@@ -8,4 +8,13 @@ Revision history for Perl extension modules.
 
 	- Added checking for eval-errors
 
-	Jesse Porter pointed me to include it.
+	'Jesse Porter' pointed me to include it.
+
+0.03 25.06.2002 13:48
+
+	- Added option 'force'. It is turned ON by default. It
+	controls if 'modules' tries to catch locally-not-loadable
+	modules from CPAN via the CPAN module.
+
+	- Module arguments are now passable via a hashref. Have
+	a look on example 2 in the pod.
