@@ -1,0 +1,58 @@
+'modules' version 0.01
+======================
+
+Example:
+
+	use modules qw(strict warnings 5.006 Data::Dumper);
+
+becomes the short version for:
+
+	use 5.006;
+	use strict;
+	use warnings;
+	use Data::Dumper;
+
+ABSTRACT
+
+If you are bored by multiple 'use'-statement and asked why you cannot load
+several modules/pragma's with one single 'use'-line: Then you will find
+'modules' handy, because thats what it does.
+
+Ironically 'modules' is a module. The name was choosen (against the recommendation
+to use lower case names for pragma's only), because the 'use modules' construct
+sounds so self-explanatory.
+
+I just recommend to use it, if you know for what its good for. If you are a perl-
+beginner, it may more confuse you instead of helping to shrink your code for some
+characters again.
+
+VERSION
+
+0.01
+
+INSTALLATION
+
+To install this module type the following (on Win32 use 'nmake'):
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+DEPENDENCIES
+
+Doesn't requires other modules and libraries.
+
+AUTHOR
+
+Murat Ünalan (murat.uenalan@charite.de)
+
+COPYRIGHT NOTICE
+
+Copyright (c) 2002 Murat Ünalan. All rights reserved.
+
+This program is free software; you can redistribute it and/or modify it
+
+under the same terms as Perl itself.
+
+
