@@ -4,3 +4,8 @@ Revision history for Perl extension modules.
 	- original version; created by h2xs 1.21 with options
 		-A -X -a -n modules
 
+0.02 03-22-2002 15:55
+
+	- Added checking for eval-errors
+
+	Jesse Porter pointed me to include it.

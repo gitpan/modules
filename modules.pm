@@ -1,6 +1,8 @@
 package modules;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
+
+use Carp;
 
 sub import
 {
@@ -8,7 +10,12 @@ sub import
 
 	my $context = scalar caller;
 
-	eval "package $context; use $_" for @_;
+		for ( @_ )
+		{
+			eval "package $context; use $_";
+
+			croak "Can't use module '$_'. $@" if $@;
+		}
 }
 
 # Preloaded methods go here.
